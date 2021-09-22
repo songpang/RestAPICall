@@ -1,0 +1,17 @@
+# curl -X POST https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/start
+#     -H 'X-Auth-Token: {X_AUTH_TOKEN}'
+#     -H 'Content-Type: application/json'
+#     -d '{
+#         "problem": 1
+#     }'
+POST https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/start
+X-Auth-Token: c0fa1b22f9175af32578ab7cf213548c
+Content-Type: application/json
+
+{
+  "problem": 1
+}
+
+###
+
+
