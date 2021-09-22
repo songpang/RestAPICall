@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
@@ -48,17 +49,22 @@ public class APICall2 {
     }
 
     public static void main(String[] args) throws IOException {
-        APICall2 apiCall = new APICall2();
+//        APICall2 apiCall = new APICall2();
         ObjectMapper objectMapper = new ObjectMapper();
         Map<String, Object> jsonMap = new HashMap<>();
         jsonMap.put("problem", 1);
 
-        LocationDto locationDto = new LocationDto("Heloo", 2);
-        objectMapper.writeValue(new File("./test.json"), jsonMap);
-        String jsonResult = objectMapper.writeValueAsString(jsonMap);
+
+//        LocationDto locationDto = new LocationDto("Heloo", 2);
+//        objectMapper.writeValue(new File("./test.json"), jsonMap);
+        JsonNode jsonNode = objectMapper.readTree(new File("./test.json"));
+        System.out.println(jsonNode.get("0"));
+        jsonNode.get("2");
+
+//        String jsonResult = objectMapper.writeValueAsString(jsonMap);
 //        String jsonResult = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonMap);
 //        System.out.println(jsonResult);
-        System.out.println(jsonResult);
+//        System.out.println(jsonResult);
 
 //        String paramUrl = "https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/start";
 //

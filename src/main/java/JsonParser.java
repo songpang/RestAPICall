@@ -15,13 +15,22 @@ public class JsonParser {
     @SuppressWarnings("unchecked")
     public void parseJson() throws IOException {
         File json = new File("./test.json");
-        Map<String, List<Object>> result = mapper.readValue(json, Map.class);
+        Map<String, List<Object>> result = mapper.readValue(json, LinkedHashMap.class);
+        List<List<Object>> st = new ArrayList<>();
+
         list = result.get("0");
 
-        for (Object info : list) {
-			System.out.println(info);
-            LocationInfo2 EST = mapper.convertValue(info, LocationInfo2.class);
+        for (String s : result.keySet()) {
+//            System.out.println(result.get(s));
+            st.add(result.get(s));
         }
+
+        System.out.println(st.get(0));
+
+//        for (Object info : list) {
+//			System.out.println(info);
+////            LocationInfo2 EST = mapper.convertValue(info, LocationInfo2.class);
+//        }
 
     }
 

@@ -4,14 +4,21 @@
 #     -d '{
 #         "problem": 1
 #     }'
-POST https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/start
-X-Auth-Token: c0fa1b22f9175af32578ab7cf213548c
-Content-Type: application/json
-
-{
-  "problem": 1
-}
+#POST https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/start
+#X-Auth-Token: c0fa1b22f9175af32578ab7cf213548c
+#Content-Type: application/json
+#
+#{
+#  "problem": 1
+#}
 
 ###
+#dd6656e4-fb07-4370-aab6-5f396b212c6f
 
+#GET https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/locations
+#Authorization: dd6656e4-fb07-4370-aab6-5f396b212c6f
+#Content-Type: application/json
 
+GET https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users/trucks
+Authorization: dd6656e4-fb07-4370-aab6-5f396b212c6f
+Content-Type: application/json

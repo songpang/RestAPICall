@@ -8,5 +8,8 @@ APICall.java
 LocationDto2.java
  LocationDto2
  LocationInfo2
+LocationDto3.java
+ LocationDto3
+ Number
 JsonParser.java
  JsonParser
